@@ -7,6 +7,8 @@ class TweetsController < ApplicationController
 		@tweet = Tweet.new(tweet_params)
 		@tweet.save
 
+		flash[:success] = "You have created a new tweet"
+
 		redirect_to new_tweet_path
 	end
 
